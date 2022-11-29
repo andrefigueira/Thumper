@@ -25,7 +25,7 @@ class ConsumerTest extends BaseTest
      */
     public $mockChannel;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->mockConnection = $this->getMockConnection();
         $this->mockChannel = $this->getMockChannel();

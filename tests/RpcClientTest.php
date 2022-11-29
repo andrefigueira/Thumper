@@ -17,7 +17,7 @@ class RpcClientTest extends BaseTest
      */
     private $mockChannel;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $mockConnection = $this->getMockConnection();
         $this->mockChannel = $this->getMockChannel();
