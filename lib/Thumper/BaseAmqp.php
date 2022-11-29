@@ -55,7 +55,7 @@ abstract class BaseAmqp
     /**
      * @var array
      */
-    protected $exchangeOptions = array(
+    protected $exchangeOptions = [
         'passive' => false,
         'durable' => true,
         'auto_delete' => false,
@@ -63,12 +63,12 @@ abstract class BaseAmqp
         'nowait' => false,
         'arguments' => null,
         'ticket' => null
-    );
+    ];
 
     /**
      * @var array
      */
-    protected $queueOptions = array(
+    protected $queueOptions = [
         'name' => '',
         'passive' => false,
         'durable' => true,
@@ -77,14 +77,14 @@ abstract class BaseAmqp
         'nowait' => false,
         'arguments' => null,
         'ticket' => null
-    );
+    ];
 
     /**
      * @var array
      */
-    protected $consumerOptions = array(
-        'qos' => array()
-    );
+    protected $consumerOptions = [
+        'qos' => []
+    ];
 
     /**
      * @var string
@@ -94,9 +94,9 @@ abstract class BaseAmqp
     /**
      * @var array
      */
-    protected $parameters = array(
+    protected $parameters = [
         'content_type' => 'text/plain'
-    );
+    ];
 
     /**
      * BaseAmqp constructor.
@@ -212,7 +212,7 @@ abstract class BaseAmqp
                 false,
                 false,
                 false,
-                array($this, 'processMessage')
+                [$this, 'processMessage']
             );
     }
 

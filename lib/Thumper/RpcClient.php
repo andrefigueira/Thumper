@@ -64,7 +64,7 @@ class RpcClient extends BaseAmqp
     {
         list($this->queueName, , ) = $this->channel->queue_declare('', false, false, true, true);
         $this->requests = 0;
-        $this->replies = array();
+        $this->replies = [];
     }
 
     /**
@@ -109,7 +109,7 @@ class RpcClient extends BaseAmqp
                 true,
                 false,
                 false,
-                array($this, 'processMessage')
+                [$this, 'processMessage']
             );
 
         while (count($this->replies) < $this->requests) {

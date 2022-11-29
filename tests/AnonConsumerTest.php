@@ -8,14 +8,14 @@ class AnonConsumerTest extends BaseTest
 {
     public function testQueueOptionsAreSetProperly()
     {
-        $connection = $this->getMockConnection(array('channel'));
+        $connection = $this->getMockConnection(['channel']);
         $connection->expects($this->once())
             ->method('channel');
 
         $consumer = new AnonConsumer($connection);
 
         $this->assertAttributeSame(
-            array(
+            [
                 'name' => '',
                 'passive' => false,
                 'durable' => false,
@@ -24,7 +24,7 @@ class AnonConsumerTest extends BaseTest
                 'nowait' => false,
                 'arguments' => null,
                 'ticket' => null
-            ),
+            ],
             'queueOptions',
             $consumer
         );
