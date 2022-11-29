@@ -42,7 +42,7 @@ class AnonConsumer extends Consumer
         parent::__construct($connection);
 
         $this->setQueueOptions(
-            array(
+            [
                 'name' => '',
                 'passive' => false,
                 'durable' => false,
@@ -51,7 +51,7 @@ class AnonConsumer extends Consumer
                 'nowait' => false,
                 'arguments' => null,
                 'ticket' => null
-            )
+            ]
         );
     }
 }

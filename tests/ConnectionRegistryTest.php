@@ -8,9 +8,9 @@ class ConnectionRegistryTest extends BaseTest
 {
     public function testGetConnectionProvidedThroughConstructor()
     {
-        $connections = array(
+        $connections = [
             'default' => $this->getMockConnection()
-        );
+        ];
 
         $registry = new ConnectionRegistry($connections, 'default');
 
@@ -20,9 +20,9 @@ class ConnectionRegistryTest extends BaseTest
 
     public function testGetConnectionProvidedAddConnection()
     {
-        $connections = array(
+        $connections = [
             'default' => $this->getMockConnection()
-        );
+        ];
 
         $registry = new ConnectionRegistry($connections, 'default');
 
@@ -35,9 +35,9 @@ class ConnectionRegistryTest extends BaseTest
 
     public function testGetUnknownConnectionThrowsException()
     {
-        $connections = array(
+        $connections = [
             'default' => $this->getMockConnection()
-        );
+        ];
 
         $registry = new ConnectionRegistry($connections, 'default');
 
