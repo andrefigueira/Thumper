@@ -23,7 +23,7 @@ class RpcServerTest extends BaseTest
      */
     private $server;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->mockConnection = $this->getMockConnection();
 
